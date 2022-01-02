@@ -156,7 +156,7 @@ def myfunction(my_input):
 print(myfunction(5))
 
 
-# recursive function is a function that call itself
+# recursive function is a function that calls itself
 # For instance let's try the factorial (very important for interviews) : n!=n*(n-1)*(n-2)*...*1
 
 # The basic way to write it
@@ -180,7 +180,7 @@ def fibonacci(n):
 # The way to take data from an excel file ##############################################################################
 
 df = pd.read_excel('Data.xlsx')
-# You have to write the path before the name of the file if it not in the same folder as your Python code
+# You have to write the path before the name of the file if it is not saved in the same folder as your Python code
 
 print(df)
 
