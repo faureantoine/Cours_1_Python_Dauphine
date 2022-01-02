@@ -141,13 +141,13 @@ while num < 5:
     print("num", num)
 
 
-# Above we wrote num +=1, but it is the same thing as num = num + 1, it is just easier to write as we did
+# Above we wrote num +=1, but it is the same thing as num = num + 1, it is just easier to write as we did, it works for some other operators
 
 # Functions ############################################################################################################
 
-# We want to create a function that double our input :
+# We want to create a function that scared our input (use ** to square) :
 def myfunction(my_input):
-    return my_input * 2
+    return my_input ** 2
 
 
 print(myfunction(5))
@@ -177,7 +177,7 @@ def fibonacci(n):
 # The way to take data from an excel file ##############################################################################
 
 df = pd.read_excel('Data.xlsx')
-# You have to write the path before the name of the file if it not in the same folder as your code
+# You have to write the path before the name of the file if it not in the same folder as your Python code
 
 print(df)
 
