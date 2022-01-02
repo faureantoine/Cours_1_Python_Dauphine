@@ -14,11 +14,11 @@ day = ['Day 1', 'Day 3']
 '''Add 'Day 4' to the last position of the list day :'''
 ...
 
-'''Put the list day in input :'''
+'''Put the list day in index of the DataFrame df :'''
 ...
 
 '''
-We would like to calculate how many returns was negatives in our portfolio
+We would like to know how many returns are negatives in our portfolio
 '''
 
 '''The first method is to use two loops and to check for each return if it is negative or not'''
