@@ -1,6 +1,6 @@
 # Cours_1_Python_Dauphine
 
-This course is design for beginner in Python with a focus on Finance.
+This course is designed for beginner in Python with a focus on Finance.
 
 
 It is devided into 8 different chapters : 
