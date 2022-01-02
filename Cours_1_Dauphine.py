@@ -15,7 +15,7 @@ print("Hello")  # it's a bit like MsgBox in VBA
 
 # To catch an input :
 a = input()  # you have to write on the console the value of your input, it's the same logic that InputBox in VBA
-# By default, Python catches the input as a string, to transform it in integer write a number as input and test it :
+# By default, Python catches the input as a string
 
 # Libraries ############################################################################################################
 """
