@@ -91,6 +91,8 @@ my_dict_2 = {"My_first_Key": 1, "My_second_key": myTuple, "Third_key": my_list_2
 
 print(my_dict_2["My_first_Key"])
 
+my_dict["Name"] = "David"  # to add a key with its value
+
 # Operators and conditions #############################################################################################
 
 if my_list_2[1] == 2:
