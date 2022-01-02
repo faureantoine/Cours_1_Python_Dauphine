@@ -3,7 +3,7 @@
 This course is design for beginner in Python with a focus on Finance.
 
 
-It is devided into 8 differents chapters : 
+It is devided into 8 different chapters : 
 
 
 _ Basics things to know 
