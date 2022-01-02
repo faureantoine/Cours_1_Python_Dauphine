@@ -24,7 +24,7 @@ A library is like a tool box, the two more important are Pandas and Numpy. The f
 analysis. The second one is for applying mathematics and logical operations. To use a library you need to write like 
 this : 
 import ... as ...
-The first blank is the name of the library and the second name is the nickname that you give
+The first blank is the name of the library and the second blank is the nickname that you give
 
 """
 
