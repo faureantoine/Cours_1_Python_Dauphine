@@ -148,7 +148,7 @@ while num < 5:
 
 # Functions ############################################################################################################
 
-# We want to create a function that scared our input (use ** to square) :
+# We want to create a function that squared our input (use ** to square) :
 def myfunction(my_input):
     return my_input ** 2
 
