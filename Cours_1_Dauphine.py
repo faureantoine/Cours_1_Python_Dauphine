@@ -69,6 +69,12 @@ print(my_list_2)
 
 print(my_list_2[1])  # it's to print the second element of the list (the position starts by 0 !!)
 
+print(my_list_2[-1])  # to print the last element
+
+print(my_list_2[:2])  # to print the elements before the third one
+
+print(my_list_2[2:])  # to print the elements after the second one
+
 s = len(my_list_2)  # to know the size of the list
 
 # Tuple
