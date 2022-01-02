@@ -73,7 +73,7 @@ print(my_list_2[-1])  # to print the last element
 
 print(my_list_2[:2])  # to print the elements before the third one
 
-print(my_list_2[2:])  # to print the elements after the second one
+print(my_list_2[2:])  # to print the second element and those after
 
 s = len(my_list_2)  # to know the size of the list
 
