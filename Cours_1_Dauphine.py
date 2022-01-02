@@ -81,7 +81,7 @@ its position.
 myTuple = (1, "Hey")
 
 # Dictionary (very important)
-# a dictionary has elements (keys) that are unique and are not ordered (so impossible to call them by their position)
+# a dictionary has elements (keys) that are unique and are not ordered (so impossible to call them by their position, except if you use Python 3.7)
 my_dict = {}  # to creat an empty dictionary
 
 my_dict_2 = {"My_first_Key": 1, "My_second_key": myTuple, "Third_key": my_list_2}
