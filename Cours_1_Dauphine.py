@@ -4,8 +4,8 @@
 
 Python is case-sensitive, so Capital letters have an impact
 The indentation is very important contrary to VBA (this is the space before starting your line)
-You don't need to declare the type of the variables contrary to VBA (in VBA you need if you are in Option Explicit)
-Generally we use the PEP concept to read easier a code, it is just an aesthetic concept, for instance to name a class we
+You don't need to declare the type of the variables contrary to VBA (in VBA you need it if you are in Option Explicit)
+Generally we use the PEP concept so that the code reads better, it is just an aesthetic concept, for instance to name a class we
 use a capital letter
 
 """
@@ -21,10 +21,11 @@ a = input()  # you have to write on the console the value of your input, it's th
 """
 
 A library is like a tool box, the two more important are Pandas and Numpy. The first one is for data manipulation and 
-analysis. The second one is for applying mathematics and logical operations. To use a library you need to write like 
+analysis. The second one is for applying mathematics and logical operations. To use a library you generaly write like 
 this : 
 import ... as ...
-The first blank is the name of the library and the second blank is the nickname that you give
+The first blank is the name of the library and the second blank is the nickname that you give. Nevertheless you don't 
+need to use a nickname so if you want you can write only : import ... 
 
 """
 
@@ -48,6 +49,12 @@ print("My name is ", name, "and I am ", age)
 
 # to check the type of variable :
 print(type(age))
+
+# To change the type of a variable use casting :
+x = str(3)    # x will be '3'
+y = int(3)    # y will be 3
+z = float(3)  # z will be 3.0
+# It is very useful when you use the input() function
 
 # A boolean takes two values : True or False
 # True is equal to 1 and False is equal to 0
@@ -152,7 +159,8 @@ while num < 5:
     print("num", num)
 
 
-# Above we wrote num +=1, but it is the same thing as num = num + 1, it is just easier to write as we did, it works for some other operators
+# Above we wrote num +=1, but it is the same thing as num = num + 1, it is just easier to write as we did, it works for 
+# some other operators
 
 # Functions ############################################################################################################
 
@@ -184,6 +192,7 @@ def factorial(n):
 def fibonacci(n):
     return fibonacci(n - 1) if n > 1 else 1
 
+# Don't forget that to call or to define a function we use brackets ! 
 
 # The way to take data from an excel file ##############################################################################
 
