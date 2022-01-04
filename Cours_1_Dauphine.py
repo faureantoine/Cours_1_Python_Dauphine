@@ -189,8 +189,8 @@ def factorial(n):
 
 
 # A recursive function with Fibonacci (very important for interviews)
-def fibonacci(n):
-    return fibonacci(n - 1) if n > 1 else 1
+def fibo(n):
+    return fibo(n-1)+fibo(n-2) if n>1 else n
 
 # Don't forget that to call or to define a function we use brackets ! 
 
