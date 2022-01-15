@@ -100,7 +100,7 @@ myTuple = (1, "Hey")
 my_dict = {}  # to creat an empty dictionary
 
 my_dict_2 = {"My_first_Key": 1, "My_second_key": myTuple, "Third_key": my_list_2} 
-# so for instance the key "My_first_Key" has the value 1. A key is always a string type
+# so for instance the key "My_first_Key" has the value 1. A key is generaly a string type, sometimes a tuple.
 
 print(my_dict_2["My_first_Key"])
 
