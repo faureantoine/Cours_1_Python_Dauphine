@@ -29,7 +29,7 @@ for i in range(len(df. columns)):  # First loop for the columns
 
 
 '''
-Second way is to use boolean and to count how many boolean are True
+Second way is to use boolean and to count how many booleans are True
 '''
 
 dfNew = (df <= 0)
