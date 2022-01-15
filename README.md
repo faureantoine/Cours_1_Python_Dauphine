@@ -23,6 +23,8 @@ _ Exception handling
 
 
 
+
+
 The second course is devided into :
 
 _ Quick nice excercie with concepts of the first chapter
