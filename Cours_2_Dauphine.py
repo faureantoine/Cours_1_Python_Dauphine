@@ -184,8 +184,8 @@ class Car:
 
 MyCar = Car("Toyota")
 '''
-So to explain the path of what happened  :
-1) I created the object MyCar of the class Car, with one parameter. We instantiate the object MyCar of the class Car
+So to explain the path of the code :
+1) I created the object MyCar of the class Car, with one parameter. We instantiated the object MyCar of the class Car
 2) "Type" is saved and this is a class attribute.
 3) As a constructor (a constructor is called directly when we instantiate the object), the init method is called 
 (__init__(self,...)). The instance attributes color and model are initialized with the value "Blue" and "Toyota". 
