@@ -33,7 +33,7 @@ _ Functions
 
 _ Special functions (lambda and map)
 
-_ OOP (class, object, class methods, init method, class attribute, instance attribute)
+_ OOP (class, object, instance method, init method, class attribute, instance attribute)
 
 
 
