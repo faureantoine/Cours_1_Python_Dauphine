@@ -154,13 +154,13 @@ print(HisCar.color)
 
 # Self is like the state of the object, it is used to access variables that belongs to the class.
 
-# Class Properties
+# Instance method
 class Car:
 
     def __init__(self, color: str):  # the input color must be a string
         self.color = color
 
-    def driving(self):  # this is a class method
+    def driving(self):  # this is an instance method
         print("The {} car is driving".format(self.color))  # same as print("The ", self.color, " car is driving")
 
 
@@ -169,7 +169,7 @@ MyCar = Car("blue")
 MyCar.driving()  # We know that driving is a method cause they are brackets
 
 
-# A class method can be called directly when we creat an object :
+# An instance method can be called directly when we creat an object :
 class Car:
     Type = "This is car"
 
