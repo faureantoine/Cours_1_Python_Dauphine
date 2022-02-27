@@ -119,8 +119,9 @@ for i in np.arange(0, 1, 0.00001):  # arange is like range but with a step (equa
 print("--- %s seconds to find the solution with loop ---" % (time.time() - start))
 
 if better:
-    print("The solver has a problem")
+    print("The solver has a problem cause we found a portfolio with a volatility equal to ", result[-1], 
+          " whereas the solver found a portfolio with a volatility equal to ", solution)
 else:
-    print("the solver seems to be good because with iteration we douns a min vol portfolio equal to ", min(result),
-          " and the min vol portfolio obtained by the solver is lover and equal to ", solution)
+    print("the solver seems to be good because with iteration we found a min vol portfolio equal to ", min(result),
+          " and the min vol portfolio obtained by the solver is lower and equal to ", solution)
 
