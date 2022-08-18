@@ -1,19 +1,19 @@
-# Basics things to know in Python ######################################################################################
+# Basic things to know in Python ######################################################################################
 
 """
 
 Python is case-sensitive, so Capital letters have an impact
 The indentation is very important contrary to VBA (this is the space before starting your line)
-You don't need to declare the type of the variables contrary to VBA (in VBA you need it if you are in Option Explicit)
+You don't need to declare the type of the variables contrary to VBA (in VBA you need if you are in Option Explicit)
 Generally we use the PEP concept so that the code reads better, it is just an aesthetic concept, for instance to name a class we
-use a capital letter
+use a capital letter for the first letter.
 
 """
 
-# To print something on the console :
+# To print something on the console:
 print("Hello")  # it's a bit like MsgBox in VBA
 
-# To catch an input :
+# To catch an input:
 a = input()  # you have to write on the console the value of your input, it's the same logic that InputBox in VBA
 # By default, Python catches the input as a string
 
