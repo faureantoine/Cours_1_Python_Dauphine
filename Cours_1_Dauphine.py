@@ -93,9 +93,12 @@ its position.
 
 myTuple = (1, "Hey")
 
+# For one element in a tuple you need to write a comma after the value: 
+
+myTuple = (3,)
+
 # Dictionary (very important)
-# a dictionary has elements (keys) that are unique and are not ordered (so impossible to call them by their position, 
-# except if you use Python 3.7)
+# a dictionary has elements (keys) that are unique and are ordered (ordered if you use Python 3.7 or more recent version)
 # each key has a value
 my_dict = {}  # to creat an empty dictionary
 
