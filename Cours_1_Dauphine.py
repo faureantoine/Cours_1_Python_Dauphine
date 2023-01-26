@@ -217,9 +217,12 @@ VL = (1 + returns).cumprod()  # let's calculate the VL for each column (asset)
 
 # We can pick/change data easily with the position :
 VL.iloc[0, :] = 1  # we change the value of the first row (the row zero , and ":" represent all the columns")
-# Like in VBA, the first index is for row and the second is for column
+# Like in VBA, the first position inside the square braket is for row and the second is for column
 
 # Exception handling ###################################################################################################
+
+# When an error occurs, or exception as we call it, Python will normally stop and generate an error message.
+# These exceptions can be handled using the try statement:
 
 try:
     a = 3
@@ -230,6 +233,7 @@ except:
 
 print("even if there is and error, the program continues")
 
+# You can specify specific errors
 try:
     a = "g"
     b = 3
