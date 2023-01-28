@@ -1,12 +1,10 @@
 # Basic things to know in Python ######################################################################################
 
 """
-
 Python is case-sensitive, so CAPITAL letters have an impact
 The indentation is very important contrary to VBA (this is the space before starting your line)
 You don't need to declare the type of the variables contrary to VBA (in VBA you need if you are in Option Explicit)
 Generally we use the PEP concept so that the code reads better, it is just an aesthetic concept
-
 """
 
 # To print something on the console:
@@ -15,7 +13,6 @@ print("Hello")  # it's a bit like MsgBox in VBA
 
 # Libraries ############################################################################################################
 """
-
 A library is like a tool box, the two more important are Pandas and Numpy. The first one is for data manipulation and 
 analysis. The second one is for applying mathematics and logical operations. To use a library you generaly write like 
 this : 
@@ -23,7 +20,6 @@ import ... as ...
 The first blank is the name of the library and the second blank is the nickname that you give. Nevertheless you don't 
 need to use a nickname so if you want you can write only : import ... 
 Libraries are very useful, for instance if you want to solve a equation, you can import a library that contain a solver
-
 """
 
 import numpy as np
@@ -92,7 +88,7 @@ its position like a list.
 myTuple = (1, "Hey")
 
 print(myTuple[0])
-print(len(myTuple)
+print(len(myTuple))
 
 # For one element in a tuple you need to write a comma after the value: 
 
