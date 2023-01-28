@@ -2,20 +2,16 @@
 
 """
 
-Python is case-sensitive, so Capital letters have an impact
+Python is case-sensitive, so CAPITAL letters have an impact
 The indentation is very important contrary to VBA (this is the space before starting your line)
 You don't need to declare the type of the variables contrary to VBA (in VBA you need if you are in Option Explicit)
-Generally we use the PEP concept so that the code reads better, it is just an aesthetic concept, for instance to name a class we
-use a capital letter for the first letter.
+Generally we use the PEP concept so that the code reads better, it is just an aesthetic concept
 
 """
 
 # To print something on the console:
 print("Hello")  # it's a bit like MsgBox in VBA
 
-# To catch an input:
-a = input()  # you have to write on the console the value of your input, it's the same logic that InputBox in VBA
-# By default, Python catches the input as a string
 
 # Libraries ############################################################################################################
 """
@@ -26,15 +22,17 @@ this :
 import ... as ...
 The first blank is the name of the library and the second blank is the nickname that you give. Nevertheless you don't 
 need to use a nickname so if you want you can write only : import ... 
+Libraries are very useful, for instance if you want to solve a equation, you can import a library that contain a solver
 
 """
 
 import numpy as np
 import pandas as pd
 
+
 # Data Types ###########################################################################################################
 
-''' We give a name of a variable after an equal and finally the value, doesn't need to give the type '''
+''' We give a name of a variable them an equal and finally the value, doesn't need to define the type of the variable '''
 
 # For a string :
 name = "Nicolas"
@@ -54,10 +52,10 @@ print(type(age))
 x = str(3)    # x will be '3'
 y = int(3)    # y will be 3
 z = float(3)  # z will be 3.0
-# It is very useful when you use the input() function
+
 
 # A boolean takes two values : True or False
-# True is equal to 1 and False is equal to 0
+# True is equal to 1 and False is equal to 0 (but you can't see it directly)
 my_boolean = True
 
 print(3 != 4)  # To check if 3 is not equal to 4
@@ -86,12 +84,15 @@ s = len(my_list_2)  # to know the size of the list
 
 # Tuple
 '''
-A tuple is ordered but contrary to a list, we can't modified it after the creation (we say that a tuple is not mutable). 
+A tuple is ordered but contrary to a list, we can't modified it after the creation (we say that a tuple is immutable). 
 It can contain different type of element like the lists. We can calculate the number of element and call an element by
-its position.
+its position like a list.
 '''
 
 myTuple = (1, "Hey")
+
+print(myTuple[0])
+print(len(myTuple)
 
 # For one element in a tuple you need to write a comma after the value: 
 
@@ -109,6 +110,7 @@ print(my_dict_2["My_first_Key"])
 
 my_dict["Name"] = "David"  # to add a key with its value
 
+      
 # Operators and conditions #############################################################################################
 
 if my_list_2[1] == 2:
@@ -133,6 +135,7 @@ if not my_boolean:
 else:
     print("the boolean is True")
 
+      
 # Loop #################################################################################################################
 for i in my_list_2:
     print(i)
@@ -161,23 +164,25 @@ while num < 5:
     num += 1
     print("num", num)
 
-
-# Above we wrote num +=1, but it is the same thing as num = num + 1, it is just easier to write as we did, it works for 
-# some other operators
-
+"""
+Above we wrote num +=1, but it is the same thing as num = num + 1, it is just easier to write as we did, it works for 
+the other operators
+"""
+      
+      
 # Functions ############################################################################################################
 
 # We want to create a function that squared our input (use ** to square) :
 def myfunction(my_input):
     return my_input ** 2
 
-
 print(myfunction(5))
 
-
-# recursive function is a function that calls itself
-# For instance let's try the factorial (very important for interviews) : n!=n*(n-1)*(n-2)*...*1
-
+"""
+Recursive function is a function that calls itself
+for instance let's try the factorial (very important for interviews) : n!=n*(n-1)*(n-2)*...*1
+"""
+      
 # The basic way to write it
 def factorial_1(n):
     if n > 1:
@@ -195,8 +200,9 @@ def factorial(n):
 def fibo(n):
     return fibo(n-1)+fibo(n-2) if n>1 else n
 
-# Don't forget that to call or to define a function we use brackets ! 
+# Don't forget that to call or to define a function we use brackets! 
 
+      
 # The way to take data from an excel file ##############################################################################
 
 df = pd.read_excel('Data.xlsx')
