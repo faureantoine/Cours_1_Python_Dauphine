@@ -76,7 +76,7 @@ def my_function(n): # This function returns True if the input is superior to 2, 
 
 my_results = list(filter(my_function, [1, 2, 3, 4, 5])) # Don't forget to transform the filter object into a list
 
-print(my_result) # Only the elements of the iterable are shown because the make the output of the function equals to True. 
+print(my_results) # Only the elements of the iterable are shown because the make the output of the function equals to True. 
 
 
 # Lambda is an anonymous function, so we don't need to give a name to this function
@@ -92,22 +92,13 @@ print(the_funct(2, 7))
 
 print(list(map(lambda a: a * a, my_iterable)))  # In this example the lambda function a*a is anonymous
 
-print(list(filter(lambda a: a>2, [1, 2, 3, 4, 5]))
+print(list(filter(lambda a: a>2, [1, 2, 3, 4, 5])))
 
 
 #  Class ##############################################################################################################
 
-'''
-OOP (Object Oriented Programming) is a concept for :
 
-_Class
-_Objects
-_Polymorphism
-_Encapsulation
-_Inheritance
-_Abstraction
-
-'''
+# OOP (Object Oriented Programming) is a concept for class and objects
 
 
 # My first (empty) class :
