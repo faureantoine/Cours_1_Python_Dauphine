@@ -54,26 +54,46 @@ def my_new_function(n: int, m=2) -> int:  # So the output is an integer
 
 #  Special functions ###################################################################################################
 
-# Lambda is an anonymous function, so we don't need to give a name to this function
-# If a and b our two arguments :
-
-the_result = lambda a, b: a + b  # For this example the function is not anonymous
-
-print(the_result(2, 7))
 
 # Map is useful to apply a function in each element of an iterable
-# Iterables are containers that can store multiple values and are capable of returning them one by one (list, tuple etc)
+# Iterables are containers that can store multiple values and are capable of returning them one by one (list, tuple, dictionary etc)
 # map( function , iterable)
 
-l = [2, 3, 4, 5]
-the_results = map(my_new_function, l)
+my_iterable = [2, 3, 4, 5]
+the_results = map(my_new_function, my_iterable)
 
 # The output is a map object, if you want to transform it into a list use list()
 print(list(the_results))
 
-# With the lambda function :
 
-print(list(map(lambda a: a * a, l)))  # In this example the lambda function a*a is anonymous
+# Filter
+# Filter is written like a map function : filter( function, iterable ) 
+# Nevertheless the function must return boolean values 
+# and the output of the filter function is the element(s) of the iterable that makes the output of the function equals to True. 
+
+def my_function(n): # This function returns True if the input is superior to 2, False otherwise
+    return n>2
+
+my_results = list(filter(my_function, [1, 2, 3, 4, 5])) # Don't forget to transform the filter object into a list
+
+print(my_result) # Only the elements of the iterable are shown because the make the output of the function equals to True. 
+
+
+# Lambda is an anonymous function, so we don't need to give a name to this function
+# If a and b our two arguments :
+
+the_funct = lambda a, b: a + b  # For this example the function is not anonymous, it is called the_funct
+
+print(the_funct(2, 7))
+
+
+# Lambda is used especially for map and filter functions cause it can be used as anomymous function. 
+
+
+print(list(map(lambda a: a * a, my_iterable)))  # In this example the lambda function a*a is anonymous
+
+print(list(filter(lambda a: a>2, [1, 2, 3, 4, 5]))
+
 
 #  Class ##############################################################################################################
 
