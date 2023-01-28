@@ -148,7 +148,7 @@ MyObject = Car()
 # In creating an object the constructor __init__(self): had been called immediately (we call it the init method)
 
 
-# Instance attributes are like class attribute but it can change from one object to another :
+# Instance attributes are like class attribute but it can change from one object to another:
 class Car:
     Type = "This is a car"
 
@@ -189,7 +189,7 @@ MyCar = Car("blue")
 MyCar.driving()  # We know that driving is a method cause they are brackets
 
 
-# An instance method can be called directly when we creat an object :
+# An instance method can be called directly when we creat an object:
 class Car:
     Type = "This is car"
 
@@ -210,7 +210,7 @@ So to explain the path of the code :
 3) As a constructor (a constructor is called directly when we instantiate the object), the init method is called 
 (__init__(self,...)). The instance attributes color and model are initialized with the value "Blue" and "Toyota". 
 "Blue" is the value by default. 
-4) We are still inside the constructor and we call the method driving 
-5) We are inside the method driving and we print the sentence with the instance attribute color 
+4) We are still inside the constructor and we call the method driving() 
+5) We are inside the method driving() and we print the sentence with the instance attribute color 
 That's why the sentence "The Blue car is driving" appeared.
 '''
