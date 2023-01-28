@@ -162,7 +162,7 @@ num = 0
 
 while num < 5:
     num += 1
-    print("num", num)
+    print("num: ", num)
 
 """
 Above we wrote num +=1, but it is the same thing as num = num + 1, it is just easier to write as we did, it works for 
@@ -210,7 +210,7 @@ df = pd.read_excel('Data.xlsx')
 
 print(df)
 
-# df is a DataFrame, a DataFrame is a table of data from Pandas with columns/rows name
+# df is a DataFrame, a DataFrame is a table of data from Pandas with columns/rows name/number (it is like an excel sheet)
 # it is an important thing in Python because we can manage, look, pick and calculate data easily
 
 # We can manage directly the data :
