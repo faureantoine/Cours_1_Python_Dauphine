@@ -76,7 +76,7 @@ def my_function(n): # This function returns True if the input is superior to 2, 
 
 my_results = list(filter(my_function, [1, 2, 3, 4, 5])) # Don't forget to transform the filter object into a list
 
-print(my_results) # Only the elements of the iterable are shown because the make the output of the function equals to True. 
+print(my_results) # Only the elements of the iterable that are superior to 2 (my_function outputs TRue) are shown.
 
 
 # Lambda is an anonymous function, so we don't need to give a name to this function
