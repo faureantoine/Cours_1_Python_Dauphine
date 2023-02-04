@@ -101,12 +101,12 @@ print(list(filter(lambda a: a>2, [1, 2, 3, 4, 5])))
 # OOP (Object Oriented Programming) is a concept for class and objects
 
 
-# My first (empty) class :
+# My first (empty) class named Car
 class Car:
     pass
 
 
-# My first object of the class Car
+# My first object of the class Car named MyCar
 MyCar = Car()
 
 
@@ -136,7 +136,7 @@ class Car:
 MyObject = Car()
 
 
-# In creating an object the constructor __init__(self): had been called immediately (we call it the init method)
+# In creating an object the constructor __init__(self): had been called immediately (we call it also the init method)
 
 
 # Instance attributes are like class attribute but it can change from one object to another:
@@ -148,7 +148,7 @@ class Car:
         self.color = color
 
 
-# We instantiate the object MyCar and HisCar:
+# We instantiate the object MyCar and HisCar (in this case we define the two instance attribute brand and color):
 MyCar = Car("Toyota", "blue")
 HisCar = Car("Tesla", "White")
 
@@ -163,9 +163,9 @@ print(HisCar.color)
 
 # So the class attribute Type is the same for the two objects, but the instance attributes brand and color are different
 
-# Self is like the state of the object, it is used to access variables that belongs to the class.
+# Self is like the state of the object, it is used to access variables/methods that belongs to the class.
 
-# Instance method
+# Instance method (in OOP we call method a function)
 class Car:
 
     def __init__(self, color: str):  # the input color must be a string
@@ -180,7 +180,7 @@ MyCar = Car("blue")
 MyCar.driving()  # We know that driving is a method cause they are brackets
 
 
-# An instance method can be called directly when we creat an object:
+# An instance method can also be called directly when we creat an object:
 class Car:
     Type = "This is car"
 
@@ -196,7 +196,7 @@ class Car:
 MyCar = Car("Toyota")
 '''
 So to explain the path of the code :
-1) I created the object MyCar of the class Car, with one parameter. We instantiated the object MyCar of the class Car
+1) I created the object MyCar of the class Car, with one parameter -> We instantiated the object MyCar of the class Car
 2) "Type" is saved and this is a class attribute.
 3) As a constructor (a constructor is called directly when we instantiate the object), the init method is called 
 (__init__(self,...)). The instance attributes color and model are initialized with the value "Blue" and "Toyota". 
