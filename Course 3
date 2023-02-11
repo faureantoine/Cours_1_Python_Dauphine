@@ -1,0 +1,83 @@
+import pandas as pd 
+
+# each column of df represents the prices of an asset
+df = pd.DataFrame([[100, 100, 100],
+                   [102, 101, 99],
+                   [103, 102, 102],
+                   [102, 104, 100],
+                   [107, 101, 97],
+                   [105, 101, 99]
+                   ], columns=["Asset 1", "Asset 2", "Asset 3"])
+
+
+# The goal is to use the solver from the package Scipy to find the portfolio with the best performance.
+# The program to solve is as follow: 
+
+'''
+    
+  Min -max_perf 
+  
+  variables:
+    - weights 
+  
+  under the constraints:
+    - Sum weights = 1
+    - Each weight is bewteen 0.2 and 1
+    
+'''
+
+# We need to minimize our objective function cause the solver from Scipy only minimize function and not maximize. 
+# That's why we put a minus before the objective function.
+
+from scipy.optimize import minimize
+
+# Let's define our objective function: 
+def max_perf( weights ):
+    return sum( weights * performances )
+    
+
+# The constraint: 
+    
+constraints = [ { 'type': 'eq' , 'fun' : lambda x: np.sum(x) - 1} ]  
+# each constraint is a dictionnary
+# The constraints are put inside a list
+# Each dictionnary has two keys: 
+# _ 'type' that has ‘eq’ for equality, ‘ineq’ for inequality as value 
+# _ 'fun' that has a function constraint as value 
+# The equality function constraint returns zero when the constrain is repespected
+# The inequality function constraint returns a positive value when the constrain is respected
+
+
+# Bounds:
+    
+bounds = tuple((0.2, 1) for _ in range(3))
+# Composed of tuple(s) inside a tuple. 
+# The number of tuple inside the main tuple is equal to the number of variable that the solver can change. 
+# Each tuple has two element, the first one is the min value the variable can take, the second is the max value.
+
+
+# Initial guess:
+    
+weights_init = np.ones(size) / len(df.columns)
+# This is with the weights_init that the code will start to run the solver to find the optimal weight set. 
+
+
+# Tolerance:
+    
+tolerance = 1 / np.power(10, 15)
+# This is the precision of our solver 
+
+
+# Our program: 
+opt = minimize(lambda w: -1 * max_perf(w),
+               weights_init,
+               method = 'SLSQP',
+               bounds = bounds,
+               constraints = constraints, 
+               tol = tolerance
+               )
+
+
+
+# To have access of the optimal weight set: 
+print(opt["x"])
