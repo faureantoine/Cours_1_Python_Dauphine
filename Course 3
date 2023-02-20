@@ -81,3 +81,74 @@ opt = minimize(lambda w: -1 * max_perf(w),
 
 # To have access of the optimal weight set: 
 print(opt["x"])
+
+
+'''
+
+The goal of the following code is to build a portfolio, to calculate its volatility and to build a trading strategy
+
+'''
+
+
+import pandas as pd
+from yahoofinancials import YahooFinancials
+
+# Let's download data from Yahoo Finance
+yahoo_financials = YahooFinancials(['AAPL', 'MC.PA'])
+prices = yahoo_financials.get_historical_price_data("2019-07-10", "2021-05-30", "daily")
+apple_prices = pd.DataFrame(prices['AAPL']['prices']).drop('date', axis=1).set_index('formatted_date')['close']
+lvmh_prices = pd.DataFrame(prices['MC.PA']['prices']).drop('date', axis=1).set_index('formatted_date')['close']
+
+# Let's built a function to calculate the returns
+def returns(prices):
+    return prices.pct_change()
+
+# Let's built a function to have the value of an asset among our portfolio
+# It is like if we have invested weight euros on the asset and that we are checking at each time the value of our investment 
+def values(prices, weight):
+    values = (1+returns(prices)).cumprod()
+    values.iloc[0] = 1
+    values *= weight
+    return values
+
+
+VL_ptf = pd.DataFrame()
+VL_ptf['ptf']= values(apple_prices, 0.3) + values(lvmh_prices, 0.7)  # We invested 0.3 euros on apple and 0.7 on lvmh and we track the values of our portfolio
+
+
+Assets_returns = pd.DataFrame()
+Assets_returns['apple'] = returns(apple_prices)
+Assets_returns['lvmh'] = returns(lvmh_prices)
+
+
+# We calculate the volatility of the portfolio:
+    
+weights = pd.array([0.3, 0.7])  # We need the weight set 
+
+var_cov = Assets_returns.cov()  # We calculate the variance covariance matrix
+
+portfolio_variance = np.dot(weights.T, np.dot(var_cov, weights))  # We calculate the variance
+
+portfolio_vol = np.sqrt(portfolio_variance)  # Thanks to the variance we can calculate the risk of the portfolio (= volatility)
+
+
+
+# Let's built the trading strategy: if the price of the asset is below its moving average we are invested in the next day, otherwise no
+
+moving_average = apple_prices.rolling(window = 10).mean().iloc[9:]  # The moving average over 10 days
+
+invested_or_not_the_next_day = apple_prices.iloc[9:] < moving_average  # Let's check when the prices are below the moving average
+
+invested_or_not = invested_or_not_the_next_day.shift(1).iloc[1:]  # We shift from one day to know if we are invested or not with no lag 
+
+returns = returns(apple_prices).iloc[10:]
+
+return_strategy = invested_or_not  * returns
+
+VL_strategy =  values(return_strategy, 1)
+
+
+# We calcul the performance to check if the strategy beats the underlying asset
+performance_strat = VL_strategy.iloc[-1] / VL_strategy.iloc[0] - 1
+performance_apple = apple_prices.iloc[-1] / apple_prices.iloc[3] - 1
+
